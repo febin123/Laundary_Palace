@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>LAUNDRY PALACE</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
+    <style>
+
+/* #main-footer {
+  text-align: center;
+  padding: 1rem;
+  background:white;
+  color:black;
+  height: 60px; 
+
+
+}
+
+.footer .footer-bottom
+{
+  background: aquamarine;
+  color: black;
+  height: 90px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+  } */
+
+
+.container{
+  height: 100vh;
+  width:100%;
+  background-image: url('images/gallery/main1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 5s;
+
+  animation-name:animate ;
+  animation-direction: alternate-reverse;
+  animation-duration: 30s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+
+}
+.button primary large a{
+  padding-bottom: 50px;
+}
+
+@keyframes animate{
+  0%{
+    background-image: url("images/gallery/main1.jpg");
+  }
+  50%{
+    background-image: url("images/gallery/main2.jpg");
+  }
+  
+  100%{
+    background-image: url("images/gallery/main3.jpg");
+  }
+}
+
+.content .gallery{
+  cursor: pointer;
+  transition: 0.8s;
+
+}
+.content .gallery .a:hover
+{
+  color:green
+}
+    </style>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Intro -->
+      <section class="intro">
+        <header>
+          <h1>LAUNDRY PALACE</h1>
+          <p>
+            Shop No.2, Sai Saran CHS. Plot No.103 & 104, Near Paint Palace,
+            Sec-12E, Koparkharine, <br />Navi-Mumbai-400709
+          </p>
+          <ul class="actions">
+            <li>
+              <a href="#first" class="arrow scrolly"><span class="label">Next</span></a>
+            </li>
+          </ul>
+        </header>
+        
+  <!-- <div class="container">
+        <div class="content">
+          <span class="image fill" data-position="center"><img src="images/main2.jpg" alt="" /></span>
+        </div>
+        <div class="content">
+          <span class="image fill" data-position="center"><img src="images/main1.jpg" alt="" /></span>
+        </div>
+  </div> -->
+    
+  <div class="container">
+
+  </div>
+      </section>
+
+            <!-- Section -->
+      <section id="first">
+        <header>
+          <h2>Services we provide</h2>
+        </header>
+        <div class="content">
+          
+            <h2 style="text-align: center;"><strong>Fast, Reliable, Affordable</strong></h2> 
+            <h3 style="text-align: center;"><bold>Our SERVICES</bold> </h3>
+             <ul class="feature-icons">
+
+
+            <li class="icon solid fa fa-adjust">Wash & Fold</li>
+            <li class="icon solid fa fa-thermometer-full">Steam Iron</li>
+            <li class="icon solid fa fa-bicycle">Free Pickup & Delivery from your Doorstep</li>
+              <li class="icon solid fa fa-certificate">Dry Clean</li> 
+             <li class="icon solid fa fa-anchor">Wash & Iron</li>
+          <li class="icon solid fa fa-credit-card">Referral Benefit*</li>
+           
+            </ul>
+
+        </div>
+      </section>
+
+      <!-- start of price & offers Section -->
+      <section>
+        <header>
+          <h2>Prices and Offers available</h2>
+        </header>
+        <div class="content">
+          <h2 style="text-align: center;">
+            <strong>Price List & Offers</strong>  
+          </h2>
+
+          <!-- Section -->
+    
+  
+              <section>
+                <div class="content">
+                  <h4 style="text-align: center;">Price List</h4>
+                  <br />
+                  <div class="table-wrapper">
+                    
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+              
+                          <th>Price/Cloth(₹)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Dry Iron</td>
+                          <td id="main"></td>
+                        </tr>
+                        <tr>
+                          <td>Steam Iron</td>
+                          <td id="main-content"></td>
+                        </tr>
+                        <tr>
+                          <td>Wash & Dry Iron</td>
+                          <td id="main-contentt"></td>
+                        </tr>
+                        <tr>
+                          <td>Wash & Steam Iron</td>
+                          <td id="main1"></td>
+                        </tr>
+                        <tr>
+                          <td>Dry Clean</td>
+                          <td id="main2"></td>
+                        </tr>
+                        <tr>
+                          <td>Spot Cleaning</td>
+                          <td id="main3"></td>
+                        </tr>
+              
+                        <tr>
+                          <td>Strach</td>
+                          <td id="main4"></td>
+                        </tr>
+              
+                        <tr>
+                          <td>Roll Press Saari</td>
+                          <td id="main5"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <br /><br />
+                  <h4 style="text-align: center;">Special Offer for our Members*</h4>
+                  <br />
+                  <div class="table-wrapper">
+                    <table class="alt">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+              
+                          <th>Discount(%)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Gold Member</td>
+              
+                          <td id="main6"></td>
+                        </tr>
+                        <tr>
+                          <td>Sliver Member</td>
+              
+                          <td id="main7"></td>
+                        </tr>
+                        <tr>
+                          <td>Platinum Member</td>
+              
+                          <td id="main8"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+              
+                    <br><br>
+                    <h4 style="text-align: center;">Special Offer for our Platinum Memebers*</h4>
+                    <br />
+                    <div class="table-wrapper">
+                      <table class="alt">
+                        <thead>
+                          <tr></tr>
+              
+                          <th>Discount(%) on Bill Amount</th>
+                          <th>No. of Cloths</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+              
+              
+                            <td id="main9"></td>
+                            <td>1 to 10</td>
+                          </tr>
+                          <tr>
+              
+              
+                            <td id="main10"></td>
+                            <td>11 to 30</td>
+                          </tr>
+                          <tr>
+              
+              
+                            <td id="main11"></td>
+                            <td>31 to 150</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+              </section>
+
+      <!-- end of price and offersSection -->
+      <section>
+        <header>
+          <h2>Join Us!!</h2>
+          <p><strong>You can download it, fill up the details and you can send it to us via Contact Us section(which you may find it below)</strong>   </p>
+        
+        
+        </header>
+        <div class="content">
+          <h2>Wanna be a member?</h2>
+
+          
+          <h3>It's <bold>free of cost</bold> to join the club!!</h3>
+<h3>Download file</h3>
+           
+         
+                  <a href="images/gallery/Terms & Conditions.pdf" download class="button primary large">Terms and Condition**</a><br><br>
+          <a href="images/gallery/Sliver.pdf" download class="button primary large" >Sliver Club</a><br><br>
+          <a href="images/gallery/Gold.pdf" download class="button primary large">Gold Club</a><br><br>
+          <a href="images/gallery/Platinum.pdf" download class="button primary large">Platinum Club</a>
+      
+        </div>
+      </section>
+
+      <!-- Elements -->
+
+     
+      <!-- Section -->
+      <section>
+        <header>
+          <h2>Get in touch</h2>
+        </header>
+        <div class="content">
+          <!-- /*  <p><strong>Contact me </strong> Enter your details</p>*/ -->
+          <form action="POST" data-netlify="true">
+            <div class="fields">
+              <div class="field half">
+                <input type="text" name="name" id="name" placeholder="Name" />
+              </div>
+              <div class="field half">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div class="field">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                  rows="7"
+                ></textarea>
+              </div>
+
+              <div class="field">
+                <input
+                  type="file"
+                  name="myfile"
+                  id="myfile"
+                  placeholder="Upload file"
+                  rows="7"
+                />
+              </div>
+              <div class="field">
+                <div data-netlify-recaptcha="true"></div>
+              </div>
+            </div>
+            <ul class="actions">
+              <li>
+                <input
+                  type="submit"
+                  value="Send Message"
+                  class="button primary"
+                />
+              </li>
+            </ul>
+          </form>
+        </div>
+        <footer>
+          <ul class="items">
+            <li>
+              <h3>Email</h3>
+              <a href="#">laundrypalace2020@gmail.com</a>
+            </li>
+            <li>
+              <h3>Phone</h3>
+              <a href="#">+91-9961997939</a><br />
+              <a href="#">+91-9961997949</a><br />
+              <a href="#">+91-9167228381</a>
+            </li>
+            <li>
+              <h3>Address</h3>
+              <span
+                >Shop No.2, Sai Saran CHS. Plot No.103 & 104, Near Paint Palace,
+                Sec-12, Koparkharine,Navi-Mumbai-400709</span
+              >
+            </li>
+            
+          </ul><br>
+          <div>Copright &copy; 2020 | Created by <a href="https://www.linkedin.com/in/febin-skariya/" target="_blank">Febin Skariya</a></div>
+        </footer>
+      </section>
+
+      <!-- Copyright -->
+      <!-- <div class="footer">
+       
+        <div class="footer-bottom">
+        <h4>&copy;2020. All rights reserved || Design & created By: Febin Skariya</h4>.
+      </div>
+      </div> -->
+    <!-- <footer id="main-footer">Copright &copy; 2020 | Created by Febin Skariya</footer> -->
+
+    <!-- Scripts -->
+    <!--contentful-->
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
+<!---steam iron-->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+  'content_type':'steamIron'})
+
+  .then(function (entries) {
+
+    entries.items.forEach(function (entry) {
+    var dis=entry.fields.steamIronrate;
+
+     jQuery('#main-content').append('<td>'+ dis +'</td>')
+
+      
+    })
+  
+  })
+
+</script>
+
+<!--wash & dry-->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'ironRate'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.ironrate;
+
+        jQuery('#main-contentt').append('<td>' + dis + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+
+<!---Dry iron-->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'dryiron'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.dryiron;
+
+        jQuery('#main').append('<td>' + dis + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+<!---Wash & steam iron-->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'washandsteam'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.washandtseam;
+
+        jQuery('#main1').append('<td>' + dis + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+<!---Dryclean-->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'dryclean'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.dryclean;
+
+        jQuery('#main2').append('<td>' + dis + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+<!---spot cleaning-->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'spotcleaning'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.spotcleaning;
+
+        jQuery('#main3').append('<td>' + dis + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+<!---strach --->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'starch'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.starch;
+
+        jQuery('#main4').append('<td>' + dis + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+<!---roll press saari-->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'saari'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.saari;
+
+        jQuery('#main5').append('<td>' + dis + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+<!---gold member-->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'gold'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.gold;
+
+        jQuery('#main6').append('<td>' + dis + '%' + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+<!---sliver-->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'sliver'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.sliver;
+
+        jQuery('#main7').append('<td>' + dis + '%' + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+<!---platinum---->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'plat'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.plat;
+
+        jQuery('#main8').append('<td>' + dis + '%' + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+<!---discount 1 to 10-->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'onetoten'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.onetoten;
+
+        jQuery('#main9').append('<td>' + dis + '%' + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+
+<!---discount 11 to 30--->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'eleventothirty'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.eleventothirty;
+
+        jQuery('#main10').append('<td>' + dis + '%' + '</td>')
+
+
+      })
+
+    })
+
+</script>
+
+
+<!---discount 31 to 150---->
+<script>
+  var client = contentful.createClient({
+    space: "to4h19yboira",
+    accessToken: "UI8Cjr6HTfetGMRK2IbzAq0mSI6sjonNmMlzwMsQu2c",
+  })
+  client.getEntries({
+    'content_type': 'thirtyonehundred'
+  })
+
+    .then(function (entries) {
+
+      entries.items.forEach(function (entry) {
+        var dis = entry.fields.thirtyonehundred;
+
+        jQuery('#main11').append('<td>' + dis + '%' + '</td>')
+
+
+      })
+
+    })
+
+</script>
