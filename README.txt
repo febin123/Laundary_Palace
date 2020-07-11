@@ -1,8 +1,8 @@
 
-###Resturant_Webite
+###Laundry_Palace
 
 ##It's avaiable online 
-https://shobra-resturant.netlify.app/
+"https://laundrypalace.netlify.app/"
 
 
 ##Task
